@@ -9,7 +9,7 @@ const winStates = [
     [0, 4, 8],
     [2, 4, 6]
 ]
-let board = ['', '', '', '', '', '', '', '', '']
+const board = ['', '', '', '', '', '', '', '', '']
 let playerTime = 0
 let gameOver = false
 

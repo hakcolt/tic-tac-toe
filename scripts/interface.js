@@ -9,18 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleClick(event) {
     const position = event.target.id
     handleMove(position)
-    updateScreen()
-}
-
-function updateScreen() {
-    squares.forEach(square => {
-        const position = square.id
-        const symbol = board[position]
-
-        if (symbol != '') {
-            square.innerHTML = "<div class='" + symbol + "'></div>"
-        }
-    })
+    updateSquare(position)
     if (gameOver)
         document.getElementById("winnerText").style.display = "block"
+}
+
+function updateSquare(position) {
+    const symbol = board[position]
+    if (symbol != '')
+        squares[position].innerHTML = "<div class='" + symbol + "'></div>"
 }
